@@ -1,13 +1,5 @@
 import { relations } from "drizzle-orm";
-import {
-  pgTable,
-  serial,
-  text,
-  timestamp,
-  integer,
-  varchar,
-} from "drizzle-orm/pg-core";
-import { time } from "node:console";
+import { pgTable, timestamp, integer, varchar } from "drizzle-orm/pg-core";
 
 const timestamps = {
   createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -42,7 +34,7 @@ export const departmentRelations = relations(departments, ({ many }) => ({
   subjects: many(subjects),
 }));
 
-export const subjectsRelations = relations(subjects, ({ one, many }) => ({
+export const subjectsRelations = relations(subjects, ({ one }) => ({
   department: one(departments, {
     fields: [subjects.departmentId],
     references: [departments.id],
