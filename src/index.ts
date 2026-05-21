@@ -3,7 +3,13 @@ import subjectsRouter from "./routes/subjects";
 import cors from "cors";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
+
+if (!process.env.FRONTEND_URL) {
+  console.warn(
+    "FRONTEND_URL is not set. CORS will not be configured properly.",
+  );
+}
 
 app.use(
   cors({
