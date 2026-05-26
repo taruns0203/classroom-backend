@@ -7,7 +7,7 @@ import {
   timestamp,
   index,
 } from "drizzle-orm/pg-core";
-import { classes, enrollments } from "./app";
+import { classes, enrollments } from "./app.js";
 
 // ─── Enums ──────────────────────────────────────────────────────────────────────
 
