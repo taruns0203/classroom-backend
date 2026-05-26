@@ -35,7 +35,6 @@ const aj = arcjet({
       refillRate: 5, // Refill 5 tokens per interval
       interval: "2s", // Refill every 2 seconds
       capacity: 10, // Bucket capacity of 10 tokens
-      requested: 1,
     }),
   ],
 });
