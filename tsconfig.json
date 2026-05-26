@@ -5,10 +5,8 @@
     "lib": ["ES2022"],
 
     /* Node ESM */
-    "module": "ES2022",
-    "moduleResolution": "node",
-    /* Silence deprecated option warnings (per TS migration guidance) */
-    "ignoreDeprecations": "6.0",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
 
     /* Project structure */
     "rootDir": "src",
